@@ -12,7 +12,7 @@ var setAsap = require('setasap');
     Promise._setImmediateFn(setAsap);
 
 
-var estupendoWrapper = function estupendoWrapper(){
+var wrapper = function wrapper(){
 
     var fn /* @@@ */;
 
@@ -54,7 +54,7 @@ var buildWorkerSrc = function(fnSrc){
 
     // Setup
     var workerSrc = [];
-    var wrapSrc = estupendoWrapper.toString()
+    var wrapSrc = wrapper.toString()
         .replace("fn /* @@@ */", "fn = " + fnSrc);
 
     workerSrc.push("// Estupendo Web Worker\n");
@@ -91,7 +91,7 @@ module.exports = function(fnSrc, args, ctx){
 
         // Setup timeout
         setTimeout(function(){
-            var error = new Error('riww ERROR: Async request worker timed out', arguments);
+            var error = new Error('riww ERROR: Worker response timed out', arguments);
             worker.terminate();
             reject(error);
         }, timeout);
