@@ -1,0 +1,31 @@
+{
+  "name": "riww",
+  "version": "1.0.0",
+  "description": "Run function in a Web Worker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreasabilio/riww.git"
+  },
+  "keywords": [
+    "webworker",
+    "run"
+  ],
+  "author": "Andreas Abilio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreasabilio/riww/issues"
+  },
+  "homepage": "https://github.com/andreasabilio/riww#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "uglify-js": "^2.6.2"
+  },
+  "dependencies": {
+    "promise-polyfill": "^5.1.0",
+    "setasap": "^2.0.0"
+  }
+}
